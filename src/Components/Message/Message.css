@@ -1,0 +1,60 @@
+.message {
+    display: flex;
+    margin: 10px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.message-box {
+    background-color: whitesmoke;
+    padding: 15px 15px 0;
+    border-radius: 10px;
+}
+
+.nickname {
+    font-weight: 600;
+}
+
+.text {
+    margin: 10px 0;
+    max-width: 700px;
+    word-wrap: break-word;
+    /*height: auto;*/
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #777;
+    /*width: 200px;*/
+}
+
+.time {
+    width: 50px;
+}
+
+.like {
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+    background-color: inherit;
+}
+
+/*.icons {*/
+/*    padding: 0 5px;*/
+/*}*/
+
+.icons > * {
+    /*float: right;*/
+    height: 20px;
+    cursor: pointer;
+    margin: 0 0 0 10px;
+}
+
+

@@ -1,9 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import './Chat.css';
 
 import InputPanel from "../InputPanel/InputPanel";
 import Messages from "../Messages/Messages";
+=======
+import './Chat.css';
+import Message from "../Message/Message";
+import InputPanel from "../InputPanel/InputPanel";
+>>>>>>> afb5b5f... Add project
 
 
 export default class Chat extends React.Component {
@@ -14,23 +20,36 @@ export default class Chat extends React.Component {
             this.createMessage('Naruto Uzumaki', "I will never give up or go back on my word, because that's my ninja way!", '/images/naruto.jpeg', false),
             this.createMessage('Sakura Haruno', "*facepalm*", '/images/sakura.jpg', false),
             this.createMessage('Sasuke Uchiha', "here we go again", '/images/sasuke.jpeg', false),
+<<<<<<< HEAD
         ],
         inputText: '',
         messageToEditId: null
+=======
+        ]
+>>>>>>> afb5b5f... Add project
     }
 
     messageIds = 0
 
     setTime() {
         let now = new Date();
+<<<<<<< HEAD
         let hours = (String(now.getHours()).length === 1) ?
             '0' + now.getHours() : now.getHours();
         let minutes = (String(now.getMinutes()).length === 1) ?
             '0' + now.getMinutes() : now.getMinutes();
+=======
+        let hours = (String(now.getHours()).length === 1) ? '0' + now.getHours() : now.getHours();
+        let minutes = (String(now.getMinutes()).length === 1) ? '0' + now.getMinutes() : now.getMinutes();
+>>>>>>> afb5b5f... Add project
         return hours + ':' + minutes;
     }
 
     createMessage (name, text, image, ownMessage = true) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> afb5b5f... Add project
         return {
             name,
             text,
@@ -38,6 +57,7 @@ export default class Chat extends React.Component {
             ownMessage,
             id: this.messageIds++,
             time: this.setTime()
+<<<<<<< HEAD
         };
     }
 
@@ -67,10 +87,27 @@ export default class Chat extends React.Component {
                 messageToEditId: id
             };
         });
+=======
+        }
+    }
+
+    onTextSubmit = (text) => {
+        this.setState(({ messages }) => {
+            return {messages: [
+                ...messages,
+                this.createMessage('You', text, '/images/kakashi.png')
+                ]
+        }});
+    }
+
+    editMessage = (id) => {
+
+>>>>>>> afb5b5f... Add project
     }
 
     deleteMessage = (id) => {
         this.setState(({ messages }) => {
+<<<<<<< HEAD
             if (id === this.state.messageToEditId) {
                 return {
                     messages: messages.filter((item) => item.id !== id),
@@ -121,5 +158,29 @@ export default class Chat extends React.Component {
                             messageToEditId={this.state.messageToEditId}/>
             </div>
         );
+=======
+            return {
+                messages: messages.filter((item) => item.id !== id)
+            };
+
+        })
+    }
+
+    render() {
+        let elements = this.state.messages.map((item) => {
+            return <Message {...item} onEditMessage={this.editMessage}
+                            onDeleteMessage={this.deleteMessage}/>;
+        });
+
+        return (
+            <div className='chat'>
+                <div className='messages'>
+                    { elements }
+                </div>
+                <InputPanel onTextSubmit={this.onTextSubmit}/>
+
+            </div>
+        )
+>>>>>>> afb5b5f... Add project
     }
 }
