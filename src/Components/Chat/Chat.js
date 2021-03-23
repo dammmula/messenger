@@ -1,15 +1,23 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import './Chat.css';
 
 import InputPanel from "../InputPanel/InputPanel";
 import Messages from "../Messages/Messages";
 =======
+=======
+
+>>>>>>> 743f4cf... Add Messages componenet
 import './Chat.css';
-import Message from "../Message/Message";
+
 import InputPanel from "../InputPanel/InputPanel";
+<<<<<<< HEAD
 >>>>>>> afb5b5f... Add project
+=======
+import Messages from "../Messages/Messages";
+>>>>>>> 743f4cf... Add Messages componenet
 
 
 export default class Chat extends React.Component {
@@ -167,20 +175,18 @@ export default class Chat extends React.Component {
     }
 
     render() {
-        let elements = this.state.messages.map((item) => {
-            return <Message {...item} onEditMessage={this.editMessage}
-                            onDeleteMessage={this.deleteMessage}/>;
-        });
-
         return (
             <div className='chat'>
-                <div className='messages'>
-                    { elements }
-                </div>
+                <Messages messages={this.state.messages}
+                          onEditMessage={this.editMessage}
+                          onDeleteMessage={this.deleteMessage}/>
                 <InputPanel onTextSubmit={this.onTextSubmit}/>
-
             </div>
+<<<<<<< HEAD
         )
 >>>>>>> afb5b5f... Add project
+=======
+        );
+>>>>>>> 743f4cf... Add Messages componenet
     }
 }
