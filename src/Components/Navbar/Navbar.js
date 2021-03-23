@@ -8,6 +8,6 @@ const Navbar = () => {
             <span>4 participants</span>
         </nav>
     );
-}
+};
 
 export default Navbar;
