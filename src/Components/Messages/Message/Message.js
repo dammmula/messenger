@@ -22,23 +22,35 @@ export default class Message extends React.Component {
                 id, time } = this.props;
         const { liked } = this.state;
 
-        const ownIcons = (
-            <div className='icons'>
-                <img src='/images/edit.png' alt=''
-                        onClick={() => onEditMessage(id)}/>
-                <img src='/images/trash.webp' alt=''
-                        onClick={() => onDeleteMessage(id)}/>
-            </div>
-        );
+        if (ownMessage) {
+            return (
+                <div className='message '>
+                    <div className='message-box own-message'>
+                        <span className='nickname'>{name}</span>
+                        <p className='text'>{text}</p>
+                        <p className='tools'>
+                            <div className='info'>
+                                <span className='time'>{time}</span>
+                                {/*<span className='likes-count'>likes</span>*/}
+                            </div>
+
+                            <div className='icons'>
+                                <img src='/images/edit.png' alt=''
+                                     onClick={() => onEditMessage(id)}/>
+                                <img src='/images/trash.webp' alt=''
+                                     onClick={() => onDeleteMessage(id)}/>
+                            </div>
+                        </p>
+                    </div>
+
+                    <img className='avatar' src={image} alt={name}/>
+                </div>
+            );
+        }
 
         let heartImg = liked ?
             '/images/heart-black.svg' :
             '/images/heart-thin.svg';
-
-        let icons = ownMessage ? ownIcons :
-            (<img className='like' src={heartImg} alt=''
-                  onClick={this.likeClick}/>);
-
 
         return (
             <div className='message'>
@@ -47,9 +59,10 @@ export default class Message extends React.Component {
                 <div className='message-box'>
                     <span className='nickname'>{name}</span>
                     <p className='text'>{text}</p>
-                    <p className='info'>
+                    <p className='tools'>
                         <span className='time'>{time}</span>
-                        <span className='icons'>{icons}</span>
+                        <img className='like' src={heartImg} alt=''
+                             onClick={this.likeClick}/>
                     </p>
                 </div>
             </div>

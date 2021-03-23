@@ -1,6 +1,11 @@
 .message {
     display: flex;
+    /*flex-direction: row-reverse;*/
     margin: 10px;
+}
+
+.own-message {
+    margin-left: auto;
 }
 
 .avatar {
@@ -27,12 +32,18 @@
     /*height: auto;*/
 }
 
-.info {
+.tools {
     display: flex;
     justify-content: space-between;
     font-size: 0.8em;
     color: #777;
-    /*width: 200px;*/
+    /*right: 100px;*/
+    /*width: 150px;*/
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
 }
 
 .time {
@@ -46,12 +57,7 @@
     background-color: inherit;
 }
 
-/*.icons {*/
-/*    padding: 0 5px;*/
-/*}*/
-
 .icons > * {
-    /*float: right;*/
     height: 20px;
     cursor: pointer;
     margin: 0 0 0 10px;
