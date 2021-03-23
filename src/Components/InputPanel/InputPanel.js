@@ -2,6 +2,7 @@ import React from 'react';
 import './InputPanel.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const InputPanel = (props) => {
     const { text, onTextInput, onTextSubmit,
@@ -26,17 +27,17 @@ export default class InputPanel extends React.Component {
     state = {
         text: ''
     }
+=======
+>>>>>>> 0ce8f22... Add editing message functionality
 
-    onTextInput = (event) => {
-        this.setState({ text: event.target.value });
-    }
+const InputPanel = (props) => {
+    const { text, onTextInput, onTextSubmit,
+        onEditedMessageSubmit, messageToEditId} = props;
 
-    onSubmit = (event) => {
-        event.preventDefault();
-        this.props.onTextSubmit(this.state.text);
-        this.setState({ text: '' });
-    }
+    const onSubmit = messageToEditId === null ?
+        onTextSubmit : onEditedMessageSubmit;
 
+<<<<<<< HEAD
     render() {
         return (
             <form onSubmit={this.onSubmit}>
@@ -49,3 +50,16 @@ export default class InputPanel extends React.Component {
     }
 }
 >>>>>>> afb5b5f... Add project
+=======
+    return (
+        <form onSubmit={onSubmit}>
+            <input placeholder='message'
+                   onChange={onTextInput}
+                   value={text}/>
+            <button>Send</button>
+        </form>
+    );
+}
+
+export default InputPanel;
+>>>>>>> 0ce8f22... Add editing message functionality
