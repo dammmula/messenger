@@ -2,6 +2,9 @@ import React from 'react';
 import './Navbar.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cfcb261... Make Navbar a functional component
 const Navbar = () => {
     return (
         <nav className='navbar'>
@@ -9,6 +12,7 @@ const Navbar = () => {
             <span>4 participants</span>
         </nav>
     );
+<<<<<<< HEAD
 };
 
 export default Navbar;
@@ -24,3 +28,8 @@ export default class Navbar extends React.Component {
     }
 }
 >>>>>>> afb5b5f... Add project
+=======
+}
+
+export default Navbar;
+>>>>>>> cfcb261... Make Navbar a functional component
