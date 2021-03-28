@@ -19,8 +19,9 @@ export default class Message extends React.Component {
     render() {
         const { name, text, image, ownMessage,
                 onEditMessage, onDeleteMessage,
-                id, time } = this.props;
+                id, time, edited } = this.props;
         const { liked } = this.state;
+        const editedNote = edited ? '(edited)' : '';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,7 +35,7 @@ export default class Message extends React.Component {
                         <p className='text'>{text}</p>
                         <p className='tools'>
                             <div className='info'>
-                                <span className='time'>{time}</span>
+                                <span className='time'>{time} {editedNote}</span>
                                 {/*<span className='likes-count'>likes</span>*/}
                             </div>
 
@@ -100,7 +101,7 @@ export default class Message extends React.Component {
 >>>>>>> 743f4cf... Add Messages componenet
 =======
                     <p className='tools'>
-                        <span className='time'>{time}</span>
+                        <span className='time'>{time} {editedNote}</span>
                         <img className='like' src={heartImg} alt=''
                              onClick={this.likeClick}/>
 >>>>>>> b6558b5... Change own messages appearance

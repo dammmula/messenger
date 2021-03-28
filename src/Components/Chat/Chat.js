@@ -79,6 +79,7 @@ export default class Chat extends React.Component {
             image,
             ownMessage,
             id: this.messageIds++,
+<<<<<<< HEAD
             time: this.setTime()
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +115,10 @@ export default class Chat extends React.Component {
 =======
         }
 =======
+=======
+            time: this.setTime(),
+            edited: false
+>>>>>>> 140db07... Add 'edited' note in messages
         };
 >>>>>>> 0ce8f22... Add editing message functionality
     }
@@ -221,6 +226,7 @@ export default class Chat extends React.Component {
             let newMessages = messages.map((message) => {
                 if (message.id === id) {
                     message.text = inputText;
+                    message.edited = true;
                     return message;
                 }
                 return message;
@@ -229,7 +235,7 @@ export default class Chat extends React.Component {
             return {
                 messages: newMessages,
                 inputText: '',
-                messageToEditId: null
+                messageToEditId: null,
             }
         });
     }
