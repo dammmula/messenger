@@ -13,7 +13,6 @@ const Navbar = () => {
         </nav>
     );
 <<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Navbar;
@@ -31,9 +30,6 @@ export default class Navbar extends React.Component {
 >>>>>>> afb5b5f... Add project
 =======
 }
-=======
-};
->>>>>>> 0ce8f22... Add editing message functionality
 
 export default Navbar;
 >>>>>>> cfcb261... Make Navbar a functional component
