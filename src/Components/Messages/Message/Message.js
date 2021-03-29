@@ -22,10 +22,6 @@ export default class Message extends React.Component {
                 id, time } = this.props;
         const { liked } = this.state;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b6558b5... Change own messages appearance
         if (ownMessage) {
             return (
                 <div className='message '>
@@ -51,35 +47,11 @@ export default class Message extends React.Component {
                 </div>
             );
         }
-<<<<<<< HEAD
-=======
-        const ownIcons = (
-            <div className='icons'>
-                <img src='/images/edit.png' alt=''
-                        onClick={() => onEditMessage(id)}/>
-                <img src='/images/trash.webp' alt=''
-                        onClick={() => onDeleteMessage(id)}/>
-            </div>
-        );
->>>>>>> 743f4cf... Add Messages componenet
-=======
->>>>>>> b6558b5... Change own messages appearance
 
         let heartImg = liked ?
             '/images/heart-black.svg' :
             '/images/heart-thin.svg';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        let icons = ownMessage ? ownIcons :
-            (<img className='like' src={heartImg} alt=''
-                  onClick={this.likeClick}/>);
-
-
->>>>>>> 743f4cf... Add Messages componenet
-=======
->>>>>>> b6558b5... Change own messages appearance
         return (
             <div className='message'>
                 <img className='avatar' src={image} alt={name}/>
@@ -87,23 +59,10 @@ export default class Message extends React.Component {
                 <div className='message-box'>
                     <span className='nickname'>{name}</span>
                     <p className='text'>{text}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <p className='tools'>
                         <span className='time'>{time}</span>
                         <img className='like' src={heartImg} alt=''
                              onClick={this.likeClick}/>
-=======
-                    <p className='info'>
-                        <span className='time'>{time}</span>
-                        <span className='icons'>{icons}</span>
->>>>>>> 743f4cf... Add Messages componenet
-=======
-                    <p className='tools'>
-                        <span className='time'>{time}</span>
-                        <img className='like' src={heartImg} alt=''
-                             onClick={this.likeClick}/>
->>>>>>> b6558b5... Change own messages appearance
                     </p>
                 </div>
             </div>
