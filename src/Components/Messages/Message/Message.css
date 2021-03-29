@@ -1,9 +1,6 @@
 .message {
     display: flex;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b6558b5... Change own messages appearance
     /*flex-direction: row-reverse;*/
     margin: 10px;
 }
@@ -12,14 +9,11 @@
     margin-left: auto;
 }
 
-<<<<<<< HEAD
 =======
     margin: 10px;
 }
 
 >>>>>>> 743f4cf... Add Messages componenet
-=======
->>>>>>> b6558b5... Change own messages appearance
 .avatar {
     width: 70px;
     height: 70px;
@@ -45,22 +39,15 @@
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 .tools {
 =======
 .info {
 >>>>>>> 743f4cf... Add Messages componenet
-=======
-.tools {
->>>>>>> b6558b5... Change own messages appearance
     display: flex;
     justify-content: space-between;
     font-size: 0.8em;
     color: #777;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b6558b5... Change own messages appearance
     /*right: 100px;*/
     /*width: 150px;*/
 }
@@ -68,12 +55,9 @@
 .info {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
 =======
     /*width: 200px;*/
 >>>>>>> 743f4cf... Add Messages componenet
-=======
->>>>>>> b6558b5... Change own messages appearance
 }
 
 .time {
@@ -88,7 +72,6 @@
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 .icons > * {
 =======
 /*.icons {*/
@@ -98,9 +81,6 @@
 .icons > * {
     /*float: right;*/
 >>>>>>> 743f4cf... Add Messages componenet
-=======
-.icons > * {
->>>>>>> b6558b5... Change own messages appearance
     height: 20px;
     cursor: pointer;
     margin: 0 0 0 10px;
